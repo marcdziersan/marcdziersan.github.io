@@ -1,61 +1,81 @@
+
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marcus Dziersan | Fachinformatiker AE Portfolio</title>
-  <meta name="description" content="Portfolio von Marcus Dziersan: angehender Fachinformatiker für Anwendungsentwicklung mit Praxisfokus auf PHP, MySQL, JavaScript, Java, Arduino, ESP und schlanke Webanwendungen.">
+  <title>Marcus Dziersan | Filmografisches Portfolio · Fachinformatiker AE</title>
+  <meta name="description" content="Filmografisches Onefile-Portfolio von Marcus Dziersan: Umschulung Fachinformatiker Anwendungsentwicklung, PHP, JavaScript, Java, Python, JSON, MySQL, SQLite, Mikrocontroller und praxisnahe Softwareprojekte.">
   <meta name="author" content="Marcus Dziersan">
-  <meta name="theme-color" content="#07111f">
+  <meta name="theme-color" content="#08111f">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mdwebdev.de/">
 
-  <meta property="og:title" content="Marcus Dziersan | Entwicklerportfolio">
-  <meta property="og:description" content="Schlanke Webanwendungen, praktische Tools, Java-Lernprojekte und Embedded-/Arduino-Projekte.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/marcus-profile.png">
+  <meta property="og:title" content="Marcus Dziersan | Filmografisches Portfolio">
+  <meta property="og:description" content="Von FrontPage und IIS über PHP/MySQL bis zu eigenen Frameworks, Tools, Games und Mikrocontroller-Projekten.">
+  <meta property="og:url" content="https://mdwebdev.de/">
+  <meta property="og:locale" content="de_DE">
 
-  <link rel="icon" href="assets/marcus-profile.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marcus Dziersan",
+    "url": "https://mdwebdev.de/",
+    "sameAs": [
+      "https://github.com/marcdziersan",
+      "https://marcdziersan.github.io/"
+    ],
+    "jobTitle": "Umschüler Fachinformatiker Anwendungsentwicklung",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ferdinandstr. 2",
+      "postalCode": "44536",
+      "addressLocality": "Lünen",
+      "addressRegion": "Nordrhein-Westfalen",
+      "addressCountry": "DE"
+    },
+    "knowsAbout": [
+      "PHP 8+", "OOP", "MVC", "PDO", "MySQLi", "SQLite", "JavaScript", "HTML5", "CSS3", "Java", "Python", "JSON", "SQL", "Mikrocontroller", "ESP32", "Arduino", "Softwarearchitektur", "Git", "Dokumentation"
+    ]
+  }
+  </script>
 
   <style>
     :root {
       --bg: #07111f;
-      --bg-soft: #0c1828;
-      --card: rgba(14, 29, 48, 0.72);
-      --card-solid: #101f33;
-      --text: #ecf4ff;
-      --muted: #9fb1c8;
-      --line: rgba(148, 180, 214, 0.18);
-      --teal: #47d8e6;
-      --teal-soft: rgba(71, 216, 230, 0.16);
-      --gold: #f0a23a;
-      --gold-soft: rgba(240, 162, 58, 0.16);
-      --red: #ff6b6b;
-      --shadow: 0 22px 70px rgba(0, 0, 0, 0.32);
-      --radius-lg: 28px;
-      --radius: 18px;
-      --max: 1120px;
-      --nav-height: 74px;
-      font-synthesis: none;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      --bg-2: #0a1528;
+      --panel: rgba(255,255,255,.07);
+      --panel-strong: rgba(255,255,255,.12);
+      --text: #eef6ff;
+      --muted: #a9b8cd;
+      --soft: #d6e4f5;
+      --line: rgba(255,255,255,.16);
+      --accent: #82e6ff;
+      --accent-2: #ffd166;
+      --accent-3: #b7ff8a;
+      --danger: #ff7a90;
+      --shadow: 0 24px 70px rgba(0,0,0,.42);
+      --radius: 26px;
+      --radius-sm: 16px;
+      --max: 1180px;
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
     }
 
     * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      background: var(--bg);
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 18% 10%, rgba(71, 216, 230, 0.18), transparent 32rem),
-        radial-gradient(circle at 86% 16%, rgba(240, 162, 58, 0.16), transparent 30rem),
-        linear-gradient(135deg, #060d18 0%, #07111f 48%, #0b1626 100%);
+        radial-gradient(circle at 12% 6%, rgba(130,230,255,.17), transparent 28rem),
+        radial-gradient(circle at 92% 16%, rgba(255,209,102,.12), transparent 28rem),
+        radial-gradient(circle at 45% 88%, rgba(183,255,138,.10), transparent 30rem),
+        linear-gradient(180deg, #050914 0%, var(--bg) 36%, #050915 100%);
+      font-family: var(--font);
       overflow-x: hidden;
     }
 
@@ -64,273 +84,162 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: 0.45;
       background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px);
       background-size: 42px 42px;
-      mask-image: radial-gradient(circle at center, black, transparent 78%);
-      z-index: -2;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.65), transparent 78%);
+      z-index: -4;
     }
 
     body::after {
       content: "";
       position: fixed;
-      inset: auto -12rem -18rem auto;
-      width: 34rem;
-      height: 34rem;
-      background: radial-gradient(circle, rgba(71,216,230,0.16), transparent 70%);
-      filter: blur(10px);
+      inset: 0;
       pointer-events: none;
-      z-index: -1;
+      opacity: .09;
+      background: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 5px);
+      mix-blend-mode: overlay;
+      z-index: 200;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { max-width: 100%; display: block; }
+    p { color: var(--muted); line-height: 1.75; margin: 0; }
+    strong { color: var(--text); }
+    code { font-family: var(--mono); color: var(--accent); }
 
     .skip-link {
-      position: absolute;
-      top: -100px;
+      position: fixed;
+      top: 1rem;
       left: 1rem;
-      padding: .8rem 1rem;
-      background: var(--teal);
-      color: #03111a;
+      transform: translateY(-150%);
+      background: var(--text);
+      color: #08111f;
+      padding: .7rem 1rem;
       border-radius: 999px;
       z-index: 999;
       font-weight: 800;
     }
+    .skip-link:focus { transform: translateY(0); }
 
-    .skip-link:focus { top: 1rem; }
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -3;
+      opacity: .35;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.12) 0 1px, transparent 1px 100%),
+        radial-gradient(circle at 74% 35%, rgba(255,255,255,.10) 0 1px, transparent 1px 100%),
+        radial-gradient(circle at 41% 74%, rgba(255,255,255,.08) 0 1px, transparent 1px 100%);
+      background-size: 120px 120px, 180px 180px, 260px 260px;
+      animation: drift 28s linear infinite;
+    }
 
-    .site-header {
+    .progress {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 4px;
+      z-index: 500;
+      background: rgba(255,255,255,.08);
+    }
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+      box-shadow: 0 0 24px rgba(130,230,255,.5);
+    }
+
+    header.site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      min-height: var(--nav-height);
-      border-bottom: 1px solid var(--line);
-      background: rgba(7, 17, 31, 0.76);
+      z-index: 120;
       backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(5,9,20,.86), rgba(5,9,20,.55));
+      border-bottom: 1px solid rgba(255,255,255,.09);
     }
 
     .nav {
-      width: min(100% - 1.2rem, var(--max));
-      min-height: var(--nav-height);
+      width: min(var(--max), calc(100% - 28px));
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      min-height: 68px;
       gap: 1rem;
     }
 
     .brand {
-      display: inline-flex;
+      display: inline-grid;
+      grid-template-columns: 42px auto;
       align-items: center;
-      gap: .75rem;
+      gap: .8rem;
       min-width: 0;
     }
 
     .brand-mark {
       width: 42px;
       height: 42px;
+      border-radius: 15px;
       display: grid;
       place-items: center;
-      border-radius: 14px;
-      border: 1px solid rgba(71,216,230,.38);
-      background: linear-gradient(135deg, rgba(71,216,230,.15), rgba(240,162,58,.12));
-      box-shadow: 0 10px 30px rgba(71,216,230,.12);
-      color: var(--teal);
-      font-weight: 900;
-      letter-spacing: -.05em;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      line-height: 1.08;
-    }
-
-    .brand-text strong {
-      font-size: .98rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .brand-text span {
-      color: var(--muted);
-      font-size: .78rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .menu-toggle {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      width: 20px;
-      height: 2px;
-      margin-inline: auto;
-      background: currentColor;
-      border-radius: 999px;
-      transition: transform .2s ease, opacity .2s ease;
-    }
-
-    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .nav-links {
-      position: fixed;
-      inset: calc(var(--nav-height) + .55rem) .6rem auto .6rem;
-      display: none;
-      flex-direction: column;
-      gap: .35rem;
-      padding: .75rem;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: rgba(10, 22, 38, .96);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
-
-    .nav-links.is-open { display: flex; }
-
-    .nav-links a {
-      padding: .88rem 1rem;
-      border-radius: 14px;
-      color: var(--muted);
-      font-weight: 700;
-      transition: background .18s ease, color .18s ease, transform .18s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      background: rgba(71,216,230,.1);
-      color: var(--text);
-      outline: none;
-    }
-
-    .nav-cta {
-      color: #06101b !important;
-      background: linear-gradient(135deg, var(--teal), #7ff5ff) !important;
-      text-align: center;
-      box-shadow: 0 12px 28px rgba(71,216,230,.22);
-    }
-
-    .section {
-      width: min(100% - 1.2rem, var(--max));
-      margin: 0 auto;
-      padding: 4.2rem 0;
-    }
-
-    .hero {
-      min-height: calc(100svh - var(--nav-height));
-      display: grid;
-      align-items: center;
-      gap: 2rem;
-      padding-top: 2.4rem;
-      padding-bottom: 3.2rem;
-    }
-
-    .hero-card {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, rgba(16,31,51,.86), rgba(10,21,36,.70));
-      box-shadow: var(--shadow);
-      padding: clamp(1.2rem, 5vw, 2.2rem);
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
       background:
-        radial-gradient(circle at 18% 14%, rgba(71,216,230,.18), transparent 36%),
-        radial-gradient(circle at 82% 20%, rgba(240,162,58,.16), transparent 34%);
-      pointer-events: none;
-    }
-
-    .hero-grid {
-      position: relative;
-      display: grid;
-      gap: 1.8rem;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      width: fit-content;
-      align-items: center;
-      gap: .55rem;
-      padding: .45rem .72rem;
-      border: 1px solid rgba(71,216,230,.24);
-      border-radius: 999px;
-      background: rgba(71,216,230,.08);
-      color: #bff8ff;
-      font-size: .82rem;
-      font-weight: 800;
-      letter-spacing: .01em;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: .55rem;
-      height: .55rem;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 16px rgba(240,162,58,.75);
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1 {
-      margin-bottom: 1rem;
-      font-size: clamp(2.35rem, 12vw, 5.2rem);
-      line-height: .95;
+        linear-gradient(135deg, rgba(130,230,255,.26), rgba(255,209,102,.14)),
+        rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+      font-weight: 900;
       letter-spacing: -.08em;
     }
 
-    .gradient-text {
-      background: linear-gradient(135deg, #fff 10%, #bff8ff 44%, #ffc46f 92%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: .73rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 52vw;
     }
+    .brand b { display:block; letter-spacing: .02em; }
 
-    .hero-lead {
-      max-width: 62ch;
-      color: #c8d5e7;
-      font-size: clamp(1.02rem, 3.5vw, 1.26rem);
-      line-height: 1.65;
-      margin-bottom: 1.3rem;
-    }
-
-    .hero-actions {
+    .nav-toggle {
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.07);
+      color: var(--text);
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       display: grid;
-      gap: .85rem;
-      margin-top: 1.35rem;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      position: fixed;
+      inset: 72px 14px auto 14px;
+      display: none;
+      flex-direction: column;
+      padding: .7rem;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 22px;
+      background: rgba(8,17,31,.96);
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      padding: .85rem 1rem;
+      color: var(--muted);
+      border-radius: 14px;
+      font-weight: 720;
+    }
+    .nav-links a:hover, .nav-links a:focus, .nav-links a.active {
+      color: var(--text);
+      background: rgba(255,255,255,.08);
+      outline: none;
     }
 
     .btn {
@@ -338,832 +247,1106 @@
       align-items: center;
       justify-content: center;
       gap: .55rem;
-      min-height: 48px;
-      padding: .9rem 1.05rem;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.055);
-      color: var(--text);
-      font-weight: 850;
-      transition: transform .18s ease, background .18s ease, border-color .18s ease;
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-2px);
-      background: rgba(255,255,255,.09);
-      outline: none;
-    }
-
-    .btn-primary {
-      border-color: transparent;
-      color: #06101b;
-      background: linear-gradient(135deg, var(--teal), #a7fbff);
-      box-shadow: 0 18px 38px rgba(71,216,230,.22);
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus-visible {
-      background: linear-gradient(135deg, #72effa, #ccfdff);
-    }
-
-    .btn-gold {
-      border-color: transparent;
-      color: #1c1202;
-      background: linear-gradient(135deg, var(--gold), #ffd08a);
-      box-shadow: 0 18px 38px rgba(240,162,58,.18);
-    }
-
-    .avatar-wrap {
-      position: relative;
-      width: min(78vw, 370px);
-      margin: 0 auto;
-      isolation: isolate;
-    }
-
-    .avatar-wrap::before {
-      content: "";
-      position: absolute;
-      inset: 5%;
-      border-radius: 999px;
-      background: conic-gradient(from 180deg, rgba(71,216,230,.18), rgba(240,162,58,.24), rgba(71,216,230,.18));
-      filter: blur(26px);
-      z-index: -1;
-    }
-
-    .avatar {
+      min-height: 46px;
+      padding: .86rem 1rem;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.16);
-      box-shadow: 0 28px 70px rgba(0,0,0,.46);
-      background: var(--bg-soft);
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
+      color: var(--text);
+      background: rgba(255,255,255,.07);
+      font-weight: 830;
+      box-shadow: 0 10px 30px rgba(0,0,0,.16);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); background: rgba(255,255,255,.11); border-color: rgba(130,230,255,.35); }
+    .btn.primary { background: linear-gradient(135deg, rgba(130,230,255,.24), rgba(255,209,102,.16)); border-color: rgba(130,230,255,.35); }
+
+    .container {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
     }
 
-    .stat-grid {
+    .scene {
+      position: relative;
+      padding: 80px 0;
+    }
+
+    .hero {
+      min-height: calc(100svh - 68px);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: .8rem;
-      margin-top: 1.25rem;
+      align-items: center;
+      padding: 42px 0 76px;
+      overflow: hidden;
     }
 
-    .stat {
-      padding: .95rem;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255,255,255,.045);
+    .hero-grid {
+      display: grid;
+      gap: 1.6rem;
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.22rem;
-      color: var(--teal);
-      line-height: 1.1;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      width: max-content;
+      max-width: 100%;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.07);
+      color: var(--soft);
+      padding: .5rem .78rem;
+      border-radius: 999px;
+      font-size: .84rem;
+      font-weight: 780;
+      letter-spacing: .02em;
     }
 
-    .stat span {
-      color: var(--muted);
-      font-size: .83rem;
+    h1, h2, h3 { margin: 0; line-height: 1.04; letter-spacing: -.055em; }
+    h1 {
+      font-size: clamp(1.45rem, 5.4vw, 1.65rem);
+      max-width: 27ch;
+      text-wrap: balance;
+      letter-spacing: -.032em;
+    }
+    h1 .accent-word {
+      display: inline-block;
+      color: transparent;
+      background: linear-gradient(120deg, var(--accent), #fff, var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      filter: drop-shadow(0 10px 34px rgba(130,230,255,.12));
+    }
+
+    .lead {
+      font-size: clamp(1.05rem, 3.3vw, 1.38rem);
+      max-width: 66ch;
+      color: #d9e7f8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: .5rem;
+    }
+
+    .cinema-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.16);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.04)),
+        rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+    }
+
+    .screen {
+      min-height: 410px;
+      padding: 1rem;
+      display: grid;
+      align-content: end;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(130,230,255,.20), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    }
+
+    .screen::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      pointer-events: none;
+      box-shadow: inset 0 0 80px rgba(0,0,0,.42);
+    }
+
+    .terminal {
+      position: relative;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(4,8,15,.72);
+      backdrop-filter: blur(12px);
+      padding: 1rem;
+      font-family: var(--mono);
+      font-size: .86rem;
+      color: #dff7ff;
+    }
+    .terminal-top { display:flex; gap:.35rem; margin-bottom:.8rem; }
+    .dot { width:10px; height:10px; border-radius:99px; background:rgba(255,255,255,.35); }
+    .terminal-line { display:block; margin:.34rem 0; color: #b7c8dc; }
+    .terminal-line b { color: var(--accent); font-weight: 700; }
+    #typing { color: #fff; }
+    .cursor { animation: blink .8s steps(1) infinite; }
+
+    .film-strip {
+      display: flex;
+      gap: .65rem;
+      overflow: hidden;
+      padding: .8rem;
+      border-top: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+    }
+    .frame {
+      flex: 0 0 84px;
+      aspect-ratio: 16/10;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: linear-gradient(135deg, rgba(130,230,255,.15), rgba(255,209,102,.10));
+      display:grid;
+      place-items:center;
+      color:var(--muted);
+      font: 800 .68rem/1 var(--mono);
+      animation: slideFrames 18s linear infinite;
     }
 
     .section-head {
       display: grid;
-      gap: .7rem;
-      margin-bottom: 1.5rem;
+      gap: .8rem;
+      margin-bottom: 1.6rem;
     }
-
-    .kicker {
-      color: var(--gold);
-      font-weight: 900;
-      letter-spacing: .11em;
+    .section-kicker {
+      color: var(--accent-2);
+      font-family: var(--mono);
+      font-size: .84rem;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      font-size: .78rem;
     }
+    h2 { font-size: clamp(2.1rem, 8vw, 5.2rem); max-width: 12ch; }
+    .section-head p { max-width: 72ch; }
 
-    h2 {
-      margin-bottom: 0;
-      font-size: clamp(1.8rem, 7vw, 3rem);
-      line-height: 1.05;
-      letter-spacing: -.055em;
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px) scale(.985);
+      transition: opacity .7s ease, transform .7s ease;
     }
+    .reveal.in { opacity: 1; transform: translateY(0) scale(1); }
 
-    .section-desc {
-      max-width: 70ch;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 1rem;
-    }
+    .grid { display: grid; gap: 1rem; }
+    .grid.two, .grid.three { grid-template-columns: 1fr; }
 
-    .card-grid {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .card {
-      border: 1px solid var(--line);
+    .glass {
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.045));
       border-radius: var(--radius);
-      background: var(--card);
-      box-shadow: 0 20px 60px rgba(0,0,0,.18);
-      backdrop-filter: blur(14px);
-      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(0,0,0,.24);
+      padding: 1.05rem;
     }
 
-    .card-inner {
-      padding: 1.15rem;
+    .identity-card {
+      display: grid;
+      gap: .9rem;
     }
-
-    .card h3 {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      margin-bottom: .55rem;
-      font-size: 1.16rem;
-      letter-spacing: -.025em;
-    }
-
-    .badge-dot {
-      width: .62rem;
-      height: .62rem;
-      flex: 0 0 auto;
-      border-radius: 999px;
-      background: var(--teal);
-      box-shadow: 0 0 18px rgba(71,216,230,.65);
-    }
-
-    .badge-dot.gold {
-      background: var(--gold);
-      box-shadow: 0 0 18px rgba(240,162,58,.65);
-    }
-
-    .card p {
-      color: #bfcee2;
-      line-height: 1.65;
-      margin-bottom: 1rem;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .45rem;
-      margin-bottom: 1rem;
-    }
-
+    .identity-card h3, .project-card h3, .skill-card h3, .timeline-card h3 { font-size: 1.35rem; letter-spacing: -.03em; }
+    .tagrow { display:flex; gap:.5rem; flex-wrap:wrap; }
     .tag {
-      padding: .38rem .58rem;
-      border-radius: 999px;
-      background: rgba(255,255,255,.055);
-      border: 1px solid rgba(255,255,255,.08);
-      color: #d5e5f8;
-      font-size: .76rem;
-      font-weight: 750;
-    }
-
-    .card-link {
       display: inline-flex;
       align-items: center;
-      gap: .4rem;
-      color: #bff8ff;
-      font-weight: 850;
-    }
-
-    .card-link::after {
-      content: "→";
-      transition: transform .18s ease;
-    }
-
-    .card-link:hover::after { transform: translateX(3px); }
-
-    .feature-list {
-      display: grid;
-      gap: .8rem;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .feature-list li {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: .75rem;
-      align-items: start;
-      padding: 1rem;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255,255,255,.04);
-      color: #c8d5e7;
-      line-height: 1.6;
-    }
-
-    .feature-list li::before {
-      content: "✓";
-      display: grid;
-      place-items: center;
-      width: 1.55rem;
-      height: 1.55rem;
+      gap: .35rem;
+      min-height: 32px;
+      padding: .43rem .62rem;
       border-radius: 999px;
-      background: var(--teal-soft);
-      color: var(--teal);
-      font-weight: 900;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.055);
+      color: #d7e4f6;
+      font-size: .78rem;
+      font-weight: 740;
     }
 
-    .stack-grid {
+    .quote {
+      position: relative;
+      font-size: clamp(1.25rem, 4.5vw, 2.05rem);
+      line-height: 1.23;
+      letter-spacing: -.04em;
+      color: #fff;
+    }
+    .quote::before {
+      content: "„";
+      color: var(--accent);
+      font-size: 4rem;
+      line-height: 0;
+      vertical-align: -.36em;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .75rem;
+    }
+    .stat {
+      padding: 1rem;
+      border-radius: 20px;
+      background: rgba(0,0,0,.16);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .stat b { display:block; font-size: 1.7rem; line-height: 1; }
+    .stat span { color: var(--muted); font-size: .82rem; line-height: 1.35; display:block; margin-top:.35rem; }
+
+    .timeline {
+      position: relative;
       display: grid;
       gap: 1rem;
     }
-
-    .stack-card {
-      padding: 1.1rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.045);
+    .timeline::before {
+      content:"";
+      position:absolute;
+      left: 18px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent), rgba(255,255,255,.12), var(--accent-2));
+      opacity: .55;
     }
-
-    .stack-card h3 {
-      margin-bottom: .55rem;
-      color: #f8fbff;
-      font-size: 1.05rem;
+    .timeline-card {
+      position: relative;
+      padding-left: 3.2rem;
     }
+    .timeline-card::before {
+      content:"";
+      position:absolute;
+      left: 8px;
+      top: 1.25rem;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 6px rgba(130,230,255,.08), 0 0 28px rgba(130,230,255,.25);
+    }
+    .time { color: var(--accent-2); font-family: var(--mono); font-weight: 800; font-size: .88rem; }
 
-    .stack-card p {
-      margin-bottom: 0;
+    .filterbar {
+      display: flex;
+      gap: .55rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .filterbar button {
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.055);
       color: var(--muted);
-      line-height: 1.65;
+      border-radius: 999px;
+      padding: .65rem .85rem;
+      font-weight: 800;
+      cursor: pointer;
     }
+    .filterbar button.active { color: #06111d; background: var(--accent); border-color: transparent; }
 
-    .quote-card {
+    .project-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .project-card {
       position: relative;
       overflow: hidden;
-      padding: clamp(1.25rem, 5vw, 2rem);
-      border: 1px solid rgba(240,162,58,.28);
-      border-radius: var(--radius-lg);
-      background:
-        radial-gradient(circle at 12% 12%, rgba(240,162,58,.16), transparent 30%),
-        rgba(255,255,255,.045);
-      box-shadow: var(--shadow);
+      min-height: 220px;
+      display: grid;
+      gap: .9rem;
+      align-content: start;
+      transition: transform .22s ease, opacity .22s ease, border-color .22s ease;
     }
+    .project-card::after {
+      content:"";
+      position:absolute;
+      right:-42px;
+      top:-42px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(130,230,255,.16), transparent 67%);
+      pointer-events:none;
+    }
+    .project-card:hover { transform: translateY(-4px); border-color: rgba(130,230,255,.35); }
+    .project-card.hide { display:none; }
+    .project-type { color: var(--accent); font-family: var(--mono); font-weight: 820; font-size: .82rem; }
 
-    .quote-card p {
-      margin: 0;
-      font-size: clamp(1.2rem, 5vw, 2rem);
-      line-height: 1.35;
-      letter-spacing: -.045em;
-      color: #f9fbff;
+    .skill-meter {
+      display: grid;
+      gap: .7rem;
+    }
+    .meter {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .meter i {
+      display:block;
+      width: var(--w, 70%);
+      height:100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1s ease .15s;
+    }
+    .in .meter i { transform: scaleX(1); }
+
+    .code-panel {
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(3,8,15,.74);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      font-family: var(--mono);
+    }
+    .code-panel header {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 1rem;
+      padding: .9rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+    }
+    pre {
+      margin:0;
+      padding: 1rem;
+      overflow:auto;
+      color: #d9f6ff;
+      font-size: .82rem;
+      line-height: 1.65;
+    }
+    .kw { color: #ffd166; }
+    .fn { color: #82e6ff; }
+    .str { color: #b7ff8a; }
+    .cm { color: #8090a5; }
+
+    .marquee {
+      border-block: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.035);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: .9rem 0;
+      color: #dce9fb;
+      font-family: var(--mono);
       font-weight: 850;
     }
+    .marquee-track {
+      display: inline-flex;
+      gap: 2rem;
+      min-width: 200%;
+      animation: marquee 28s linear infinite;
+    }
+    .marquee span { color: var(--accent-2); }
 
-    .contact-card {
+    .principles {
+      counter-reset: principle;
+    }
+    .principle {
+      position: relative;
+      padding-top: 3.2rem;
+    }
+    .principle::before {
+      counter-increment: principle;
+      content: "0" counter(principle);
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      color: rgba(255,255,255,.24);
+      font-family: var(--mono);
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .contact h2 { margin-inline:auto; max-width: 13ch; }
+    .contact p { margin: 1rem auto 0; max-width: 68ch; }
+
+    footer {
+      padding: 54px 0 58px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .legal-wrap {
       display: grid;
       gap: 1rem;
-      padding: clamp(1.25rem, 5vw, 2rem);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, rgba(16,31,51,.90), rgba(11,22,38,.74));
-      box-shadow: var(--shadow);
+      margin-bottom: 1.4rem;
     }
-
-    .contact-actions {
-      display: grid;
-      gap: .8rem;
-    }
-
-
-
-    .legal-grid {
-      display: grid;
-      gap: 1rem;
-    }
-
     .legal-card {
-      padding: clamp(1.1rem, 4vw, 1.6rem);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.04);
-      color: #c8d5e7;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+      padding: 1rem;
+      box-shadow: 0 22px 70px rgba(0,0,0,.22);
+    }
+    .legal-card h2 {
+      font-size: clamp(1.25rem, 6vw, 2.1rem);
+      margin-bottom: .75rem;
+      letter-spacing: -.045em;
+      color: var(--text);
+    }
+    .legal-card h3 {
+      font-size: 1rem;
+      margin: 1rem 0 .35rem;
+      letter-spacing: -.02em;
+      color: #dbeaff;
+    }
+    .legal-card p, .legal-card li {
+      margin: .35rem 0;
+      color: var(--muted);
+      line-height: 1.72;
+    }
+    .legal-card ul {
+      padding-left: 1.15rem;
+      margin: .45rem 0 .65rem;
+    }
+    .legal-card address {
+      font-style: normal;
+      color: #dbeaff;
       line-height: 1.7;
     }
-
-    .legal-card h3 {
-      margin: 1.2rem 0 .45rem;
-      color: #f8fbff;
-      font-size: 1.05rem;
-    }
-
-    .legal-card h3:first-child {
-      margin-top: 0;
-    }
-
-    .legal-card p,
-    .legal-card ul {
-      margin: 0 0 .8rem;
-    }
-
-    .legal-card ul {
-      padding-left: 1.2rem;
-    }
-
-    .legal-card a {
-      color: #bff8ff;
-      font-weight: 800;
-      overflow-wrap: anywhere;
-    }
-
+    .legal-card a { color: var(--accent); text-decoration: none; }
+    .legal-card a:hover { text-decoration: underline; }
     .legal-note {
-      padding: .9rem 1rem;
-      border: 1px solid rgba(240,162,58,.32);
-      border-radius: 16px;
-      background: rgba(240,162,58,.1);
-      color: #ffe0ae;
-      font-weight: 750;
+      margin-top: .9rem;
+      padding-top: .8rem;
+      border-top: 1px solid rgba(255,255,255,.10);
+      font-size: .86rem;
     }
-
-    .site-footer {
-      width: min(100% - 1.2rem, var(--max));
-      margin: 0 auto;
-      padding: 2rem 0 2.5rem;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      display: grid;
-      gap: .8rem;
-      font-size: .92rem;
-    }
-
+    .footer-grid { display:grid; gap: 1rem; }
     .footer-links {
       display: flex;
       flex-wrap: wrap;
-      gap: .7rem 1rem;
+      gap: .65rem;
     }
-
     .footer-links a {
-      color: #c9d8e9;
-      font-weight: 750;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+    }
+    .footer-links a:hover { color: var(--text); border-color: var(--accent); }
+
+    .spotlight {
+      position: absolute;
+      inset: auto auto 10% 50%;
+      width: 55vw;
+      height: 55vw;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(130,230,255,.12), transparent 62%);
+      filter: blur(6px);
+      pointer-events: none;
+      z-index: -1;
     }
 
-    @media (min-width: 720px) {
-      .hero-actions,
-      .contact-actions {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .btn {
-        width: auto;
-      }
-
-      .card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .stack-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-  
-
-    .legal-grid {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .legal-card {
-      padding: clamp(1.1rem, 4vw, 1.6rem);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.04);
-      color: #c8d5e7;
-      line-height: 1.7;
-    }
-
-    .legal-card h3 {
-      margin: 1.2rem 0 .45rem;
-      color: #f8fbff;
-      font-size: 1.05rem;
-    }
-
-    .legal-card h3:first-child {
-      margin-top: 0;
-    }
-
-    .legal-card p,
-    .legal-card ul {
-      margin: 0 0 .8rem;
-    }
-
-    .legal-card ul {
-      padding-left: 1.2rem;
-    }
-
-    .legal-card a {
-      color: #bff8ff;
-      font-weight: 800;
-      overflow-wrap: anywhere;
-    }
-
-    .legal-note {
-      padding: .9rem 1rem;
-      border: 1px solid rgba(240,162,58,.32);
-      border-radius: 16px;
-      background: rgba(240,162,58,.1);
-      color: #ffe0ae;
-      font-weight: 750;
-    }
-
-    .site-footer {
-        grid-template-columns: 1fr auto;
-        align-items: center;
-      }
-    }
-
-    @media (min-width: 940px) {
-      .menu-toggle { display: none; }
-
+    @media (min-width: 760px) {
+      .nav-toggle { display:none; }
       .nav-links {
         position: static;
-        display: flex !important;
+        display:flex;
         flex-direction: row;
-        align-items: center;
-        gap: .25rem;
         padding: 0;
         border: 0;
+        border-radius: 0;
         background: transparent;
         box-shadow: none;
-        backdrop-filter: none;
+        align-items: center;
       }
-
-      .nav-links a {
-        padding: .6rem .78rem;
-        font-size: .92rem;
-      }
-
-      .nav-cta {
-        margin-left: .35rem;
-        padding-inline: 1rem !important;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1.2fr .8fr;
-      }
-
-      .card-grid.projects {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .stack-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
+      .nav-links a { padding: .55rem .7rem; font-size: .9rem; }
+      .hero-grid { grid-template-columns: 1.04fr .96fr; align-items: center; }
+      .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .glass { padding: 1.35rem; }
+      .legal-wrap { grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); }
+      .footer-grid { grid-template-columns: 1fr auto; align-items: center; }
     }
+
+    @media (min-width: 1040px) {
+      .scene { padding: 112px 0; }
+      .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .nav-links a { padding: .6rem .85rem; }
+      .screen { min-height: 520px; }
+      .stats { grid-template-columns: repeat(4, 1fr); }
+      .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline::before { left: 50%; transform: translateX(-50%); }
+      .timeline-card { padding-left: 0; }
+      .timeline-card:nth-child(odd) { padding-right: 3rem; text-align: right; }
+      .timeline-card:nth-child(even) { padding-left: 3rem; margin-top: 3.5rem; }
+      .timeline-card::before { left: auto; right: -12px; }
+      .timeline-card:nth-child(even)::before { left: -12px; right:auto; }
+    }
+
+    @keyframes drift { to { background-position: 120px 120px, -180px 180px, 260px -260px; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes slideFrames { to { transform: translateX(-92px); } }
+    @keyframes marquee { to { transform: translateX(-50%); } }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .001ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: .001ms !important;
-      }
+      *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      .meter i { transform: scaleX(1); }
     }
+
+    /* User adjustment: all visible content headings at a consistent 30px. */
+    h1,
+    h2,
+    h3,
+    .section-head h2,
+    .contact h2,
+    .legal-card h2,
+    .legal-card h3,
+    .identity-card h3,
+    .project-card h3,
+    .skill-card h3,
+    .timeline-card h3 {
+      font-size: 30px !important;
+      line-height: 1.08;
+      max-width: none;
+    }
+
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="noise" aria-hidden="true"></div>
 
   <header class="site-header">
     <nav class="nav" aria-label="Hauptnavigation">
-      <a class="brand" href="#top" aria-label="Marcus Dziersan Startseite">
+      <a class="brand" href="#top" aria-label="Startseite Marcus Dziersan">
         <span class="brand-mark">MD</span>
-        <span class="brand-text">
-          <strong>Marcus Dziersan</strong>
-          <span>Fachinformatiker AE · Portfolio</span>
-        </span>
+        <span><b>Marcus Dziersan</b><small>FIAE · PHP · JS · Java · Python · SQL</small></span>
       </a>
-
-      <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="navLinks" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menü öffnen">☰</button>
       <div class="nav-links" id="navLinks">
         <a href="#profil">Profil</a>
+        <a href="#timeline">Timeline</a>
         <a href="#projekte">Projekte</a>
-        <a href="#stack">Stack</a>
+        <a href="#skills">Skills</a>
         <a href="#haltung">Haltung</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
-        <a class="nav-cta" href="https://github.com/marcdziersan" target="_blank" rel="noopener">GitHub öffnen</a>
+        <a href="#rechtliches">Rechtliches</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <section class="section hero" id="top">
-      <div class="hero-card">
-        <div class="hero-grid">
-          <div>
-            <span class="eyebrow">Praxisnah · schlank · selbst gebaut</span>
-            <h1><span class="gradient-text">Software, die verständlich bleibt.</span></h1>
-            <p class="hero-lead">
-              Ich bin Marcus Dziersan, angehender Fachinformatiker für Anwendungsentwicklung.
-              Ich entwickle schlanke Webanwendungen, Lernprojekte und praktische Tools mit Fokus auf nachvollziehbare Struktur, echte Anwendungsfälle und saubere Dokumentation.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://github.com/marcdziersan" target="_blank" rel="noopener">GitHub-Profil ansehen</a>
-              <a class="btn" href="#projekte">Projekte ansehen</a>
-              <a class="btn btn-gold" href="#kontakt">Kontakt</a>
+    <section class="hero scene" id="top">
+      <div class="spotlight" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">🎬 Onefile Portfolio · HTML5 · CSS3 · JavaScript</span>
+          <h1>Ich baue <span class="accent-word">Software</span>, die man anfassen kann.</h1>
+          <p class="lead">Ich bin Marcus Dziersan aus Lünen/NRW, Umschüler zum Fachinformatiker für Anwendungsentwicklung und praktischer Entwickler mit einer langen Spur aus Web, PHP, JavaScript, Java, Python, SQL, JSON, Games, Tools und Mikrocontroller-Projekten.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projekte">Projekte ansehen</a>
+            <a class="btn" href="https://github.com/marcdziersan" rel="me noopener" target="_blank">GitHub öffnen</a>
+            <a class="btn" href="https://mdwebdev.de/" rel="me noopener" target="_blank">mdwebdev.de</a>
+          </div>
+        </div>
+
+        <div class="cinema-card reveal" aria-label="Filmische Code-Vorschau">
+          <div class="screen">
+            <div class="terminal">
+              <div class="terminal-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <span class="terminal-line"><b>$</b> whoami</span>
+              <span class="terminal-line">Marcus Dziersan · angehender Fachinformatiker AE</span>
+              <span class="terminal-line"><b>$</b> focus --stack</span>
+              <span class="terminal-line" id="typing">PHP 8+ · OOP · MVC · SQL · JSON · JS</span><span class="cursor">_</span>
+              <span class="terminal-line"><b>$</b> motto</span>
+              <span class="terminal-line">Nicht nur Tutorials konsumieren. Dinge bauen, dokumentieren, verbessern.</span>
             </div>
           </div>
-
-          <div>
-            <div class="avatar-wrap">
-              <img class="avatar" src="assets/marcus-profile.png" width="600" height="600" alt="Illustratives Profilbild von Marcus Dziersan mit Code-, Hardware-, Musik- und Outdoor-Symbolen">
-            </div>
-            <div class="stat-grid" aria-label="Kurzprofil">
-              <div class="stat"><strong>PHP</strong><span>Webhosting, MySQL, JSON</span></div>
-              <div class="stat"><strong>JS</strong><span>Vanilla, AJAX, UI</span></div>
-              <div class="stat"><strong>Java</strong><span>Swing, JavaFX, Tools</span></div>
-              <div class="stat"><strong>IoT</strong><span>Arduino, ESP, OLED</span></div>
-            </div>
+          <div class="film-strip" aria-hidden="true">
+            <span class="frame">PHP</span><span class="frame">JSON</span><span class="frame">JAVA</span><span class="frame">ESP32</span><span class="frame">SQL</span><span class="frame">IHK</span><span class="frame">GIT</span><span class="frame">UX</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="profil">
-      <div class="section-head">
-        <span class="kicker">Profil</span>
-        <h2>Praktischer Entwickler statt Framework-Blender.</h2>
-        <p class="section-desc">
-          Meine Projekte entstehen aus konkreten Problemen, Lernzielen und technischen Experimenten. Ich arbeite bevorzugt mit klassischer Webtechnik, weil sie nachvollziehbar, gut hostbar und für viele reale Anwendungen völlig ausreichend ist.
-        </p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>◆</span> OOP <span>◆</span> MVC <span>◆</span> PDO <span>◆</span> MySQLi <span>◆</span> SQLite <span>◆</span> JavaScript <span>◆</span> Python <span>◆</span> Java Swing <span>◆</span> Arduino <span>◆</span> ESP32 <span>◆</span> Git <span>◆</span> Dokumentation
+        <span>◆</span> OOP <span>◆</span> MVC <span>◆</span> PDO <span>◆</span> MySQLi <span>◆</span> SQLite <span>◆</span> JavaScript <span>◆</span> Python <span>◆</span> Java Swing <span>◆</span> Arduino <span>◆</span> ESP32 <span>◆</span> Git <span>◆</span> Dokumentation
       </div>
+    </div>
 
-      <ul class="feature-list">
-        <li>Ich baue Anwendungen so, dass Datenflüsse, Dateistrukturen, Sessions, Datenbankzugriffe und UI-Verhalten nachvollziehbar bleiben.</li>
-        <li>Ich dokumentiere Projekte bewusst ausführlich, damit nicht nur das Ergebnis sichtbar ist, sondern auch technische Entscheidungen und Grenzen.</li>
-        <li>Ich verbinde Webentwicklung mit Java-Lernprojekten, JSON/API-Themen und Hardwareexperimenten rund um Arduino, ESP8266 und ESP32.</li>
-      </ul>
-    </section>
-
-    <section class="section" id="projekte">
-      <div class="section-head">
-        <span class="kicker">Ausgewählte Projekte</span>
-        <h2>Portfolio mit echter Werkbank-Spur.</h2>
-        <p class="section-desc">
-          Die folgenden Repositories zeigen unterschiedliche Facetten: Webanwendung, Lernspiel, Java-Game, Notfall-Demo, Embedded-Webserver, Hardware-Dokumentation und kleine Tools.
-        </p>
-      </div>
-
-      <div class="card-grid projects">
-        <article class="card">
-          <div class="card-inner">
-            <h3><span class="badge-dot"></span>PolarisNova</h3>
-            <p>Selbst hostbare Projekt-, Kunden-, Aufgaben-, Zeit-, Rechnungs-, EÜR-, Nachrichten- und Ticketverwaltung für kleine Teams und Selbstständige.</p>
-            <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">AJAX</span><span class="tag">Self-hosted</span></div>
-            <a class="card-link" href="https://github.com/marcdziersan/Kanban-Light-PolarisNova" target="_blank" rel="noopener">Repository ansehen</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-inner">
-            <h3><span class="badge-dot gold"></span>JSON Harbor</h3>
-            <p>Browserbasiertes Lernspiel zur JSON-Validierung mit Missionen, eigenem Validator, Compendium und Fortschrittsspeicherung.</p>
-            <div class="tags"><span class="tag">JavaScript</span><span class="tag">JSON</span><span class="tag">Validator</span><span class="tag">Learning</span></div>
-            <a class="card-link" href="https://github.com/marcdziersan/JSON-Harbor" target="_blank" rel="noopener">Repository ansehen</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-inner">
-            <h3><span class="badge-dot"></span>DOS Banana</h3>
-            <p>Java-Swing-Retro-Jump’n’Run mit eigener Game-Loop, Kollisionserkennung, Physik, Levelsystem und klassischem 2D-Rendering.</p>
-            <div class="tags"><span class="tag">Java</span><span class="tag">Swing</span><span class="tag">Game Loop</span><span class="tag">2D</span></div>
-            <a class="card-link" href="https://github.com/marcdziersan/DOSBanana" target="_blank" rel="noopener">Repository ansehen</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-inner">
-            <h3><span class="badge-dot gold"></span>ICE Notfall QR System</h3>
-            <p>Privates Demo-System für QR-basierte Notfallinformationen mit PHP, JSON-Datenhaltung, Adminbereich und QR-Druck-Anbindung.</p>
-            <div class="tags"><span class="tag">PHP</span><span class="tag">JSON</span><span class="tag">QR</span><span class="tag">Demo</span></div>
-            <a class="card-link" href="https://github.com/marcdziersan/ICE-Notfall-QR-System" target="_blank" rel="noopener">Repository ansehen</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-inner">
-            <h3><span class="badge-dot"></span>MiniDeviceHub8266</h3>
-            <p>ESP8266-Testprojekt mit Weboberfläche, LittleFS-Konfiguration, JSON-Statusausgabe und OTA-Firmware-Upload.</p>
-            <div class="tags"><span class="tag">ESP8266</span><span class="tag">OTA</span><span class="tag">LittleFS</span><span class="tag">Webserver</span></div>
-            <a class="card-link" href="https://github.com/marcdziersan/MiniDeviceHub8266" target="_blank" rel="noopener">Repository ansehen</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-inner">
-            <h3><span class="badge-dot gold"></span>Arduino Rheinturm</h3>
-            <p>Nachbau des Düsseldorfer Lichtzeitpegels mit WS2812B-LEDs, Arduino UNO und RTC-Modul inklusive ausführlicher Verkabelungsdokumentation.</p>
-            <div class="tags"><span class="tag">Arduino</span><span class="tag">WS2812B</span><span class="tag">RTC</span><span class="tag">Hardware</span></div>
-            <a class="card-link" href="https://github.com/marcdziersan/Arduino-Rheinturm" target="_blank" rel="noopener">Repository ansehen</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="stack">
-      <div class="section-head">
-        <span class="kicker">Technologien</span>
-        <h2>Schlanker Stack, klare Verantwortung.</h2>
-        <p class="section-desc">
-          Der Schwerpunkt liegt auf Technologien, die auf normalen Servern, lokalen Entwicklungsumgebungen und kleinen Geräten nachvollziehbar funktionieren.
-        </p>
-      </div>
-
-      <div class="stack-grid">
-        <div class="stack-card"><h3>Web Backend</h3><p>PHP 8, MySQL, MariaDB, PDO/MySQLi, Sessions, JSON, einfache API-Endpunkte.</p></div>
-        <div class="stack-card"><h3>Frontend</h3><p>HTML5, CSS3, Mobile First, Vanilla JavaScript, AJAX, responsive UI ohne Build-Zwang.</p></div>
-        <div class="stack-card"><h3>Java</h3><p>Konsolenprogramme, Java Swing, JavaFX, Lernprojekte, Dateisystem, HTTP, JSON.</p></div>
-        <div class="stack-card"><h3>Hardware</h3><p>Arduino, ESP8266, ESP32, OLED, Sensorik, LittleFS, OTA, einfache Webserver.</p></div>
-      </div>
-    </section>
-
-    <section class="section" id="haltung">
-      <div class="quote-card">
-        <p>Ich baue Software lieber verständlich, wartbar und betreibbar – nicht größer, lauter oder komplizierter als nötig.</p>
-      </div>
-    </section>
-
-    <section class="section" id="kontakt">
-      <div class="contact-card">
-        <div class="section-head" style="margin-bottom:0">
-          <span class="kicker">Kontakt & Profile</span>
-          <h2>Projekt ansehen, Code prüfen, Gespräch starten.</h2>
-          <p class="section-desc">
-            Mein GitHub-Profil zeigt aktuelle Projekte, technische Experimente und Dokumentationen. Für Recruiter und technische Ansprechpartner ist GitHub der beste Einstieg.
-          </p>
+    <section class="scene" id="profil">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Akt I · Profil</span>
+          <h2>Vom Bastler zum strukturierten Entwickler.</h2>
+          <p>Meine Story beginnt nicht erst mit der Umschulung. Die ersten Berührungen mit Webtechnik kamen früh: FrontPage, IIS, HTML/CSS/JavaScript und Server-Experimente. Später kamen PHP/MySQL, eigene Tools, JSON-Projekte, Java, Python, Mikrocontroller und schließlich die formale Ausbildung im Rahmen der Umschulung dazu.</p>
         </div>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://github.com/marcdziersan" target="_blank" rel="noopener">GitHub-Profil</a>
-          <a class="btn" href="https://github.com/marcdziersan?tab=repositories" target="_blank" rel="noopener">Alle Repositories</a>
-          <a class="btn btn-gold" href="mailto:kontakt@marcus-dziersan.net">kontakt@marcus-dziersan.net</a>
-          <a class="btn btn-gold" href="https://www.linkedin.com/in/marcus-dziersan-dev">linkedin</a>
+
+        <div class="grid two">
+          <article class="glass identity-card reveal">
+            <h3>Was bin ich?</h3>
+            <p><strong>Angehender Fachinformatiker für Anwendungsentwicklung</strong> mit starkem Praxisfokus. Ich denke in Anwendungen, Datenflüssen, CRUD, Rollen, Sicherheit, Dokumentation und sauberer Bedienbarkeit.</p>
+            <div class="tagrow">
+              <span class="tag">FIAE-Umschulung</span>
+              <span class="tag">IHK-Kontext</span>
+              <span class="tag">Praxis stark</span>
+              <span class="tag">GitHub Portfolio</span>
+            </div>
+          </article>
+
+          <article class="glass identity-card reveal">
+            <h3>Was mache ich?</h3>
+            <p>Ich baue kleine bis mittlere Webanwendungen, Frameworks, Lernplattformen, Admin-Tools, QR-/JSON-Systeme, Java-Desktop-Projekte, Browser-Games und Hardware-nahe Experimente mit Arduino/ESP.</p>
+            <div class="tagrow">
+              <span class="tag">PHP 8+</span>
+              <span class="tag">HTML5/CSS3/JS</span>
+              <span class="tag">SQL/JSON</span>
+              <span class="tag">Java/Python</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid two" style="margin-top:1rem">
+          <article class="glass reveal">
+            <p class="quote">Ich will nicht nur zeigen, dass ich Code schreiben kann. Ich will zeigen, dass ich Projekte verstehe: Idee, Struktur, Umsetzung, Doku, Verbesserung.</p>
+          </article>
+          <aside class="glass reveal">
+            <div class="stats" aria-label="Portfolio Kennzahlen">
+              <div class="stat"><b>2001</b><span>erste Webversuche mit FrontPage, IIS und klassischem Web</span></div>
+              <div class="stat"><b>2015+</b><span>intensiver mit PHP, MySQL und eigenen Anwendungen</span></div>
+              <div class="stat"><b>2024</b><span>Umschulung und stärkere professionelle Struktur</span></div>
+              <div class="stat"><b>2025/26</b><span>ESP32, Arduino, Java, Python und Portfolio-Ausbau</span></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
+    <section class="scene" id="timeline">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Akt II · Timeline</span>
+          <h2>Kein gerader Lebenslauf. Aber ein roter Faden.</h2>
+          <p>Die Entwicklung lief nicht linear. Schule, Jobs, Neustart, Selbstlernen, Projekte, Umschulung. Genau daraus entsteht mein Profil: belastbar, praxisnah und bereit, technische Themen wirklich zu greifen.</p>
+        </div>
 
-    <section class="section" id="impressum">
-      <div class="section-head">
-        <span class="kicker">Rechtliches</span>
-        <h2>Impressum</h2>
+        <div class="timeline">
+          <article class="glass timeline-card reveal">
+            <span class="time">2001 / 2002</span>
+            <h3>Erste Webkontakte</h3>
+            <p>FrontPage, IIS, HTML, CSS, JavaScript und erste Server-Ideen. Noch spielerisch, aber technisch prägend.</p>
+          </article>
+          <article class="glass timeline-card reveal">
+            <span class="time">Schule & Arbeitsleben</span>
+            <h3>Umwege statt gerader Linie</h3>
+            <p>Verschiedene Jobs, viel Alltagspraxis, viel Improvisation. Nicht klassisch, aber nützlich für reale Projektarbeit: Probleme sehen, nicht nur Aufgaben abarbeiten.</p>
+          </article>
+          <article class="glass timeline-card reveal">
+            <span class="time">2015 / 2016</span>
+            <h3>PHP, MySQL und eigene Tools</h3>
+            <p>Wieder intensiver eingestiegen: Webseiten, Webradio-Systeme, Standalone-PHP-Apps und private Projekte.</p>
+          </article>
+          <article class="glass timeline-card reveal">
+            <span class="time">ca. 2020</span>
+            <h3>JSON als Datenbasis</h3>
+            <p>Eigene JSON-Strukturen, Kataloge, kleine Datensysteme und Tooling. Grundlage für Projekte wie JSON Harbor und ICE-/QR-Demos.</p>
+          </article>
+          <article class="glass timeline-card reveal">
+            <span class="time">2024</span>
+            <h3>Umschulung FIAE</h3>
+            <p>Formaler Einstieg in professionelle Anwendungsentwicklung: OOP, Datenbanken, Web, Projektmanagement, Dokumentation, Git und Prüfungsprojekte.</p>
+          </article>
+          <article class="glass timeline-card reveal">
+            <span class="time">2025 / 2026</span>
+            <h3>Portfolio wird Produktspur</h3>
+            <p>Java-Games, PHP-Frameworks, Haushalts-/Kalender-Apps, Arduino/ESP-Projekte, Drucker-Tools, Lernplattformen und öffentlich dokumentierte GitHub-Reihen.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="legal-grid">
-        <div class="legal-card">
-          
-          <h3>Angaben gemäß § 5 DDG</h3>
-          <p>
+    <section class="scene" id="projekte">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Akt III · Projekte</span>
+          <h2>Projekte statt Behauptungen.</h2>
+          <p>Die Galerie ist bewusst breit: Webanwendungen, Frameworks, Lernsoftware, Hardware, Games und Datentools. Dadurch sieht man nicht nur einen Stack, sondern Denkweise, Durchhaltevermögen und Transferfähigkeit.</p>
+        </div>
+
+        <div class="filterbar reveal" aria-label="Projektfilter">
+          <button class="active" data-filter="all">Alle</button>
+          <button data-filter="web">Web</button>
+          <button data-filter="framework">Framework</button>
+          <button data-filter="java">Java</button>
+          <button data-filter="python">Python</button>
+          <button data-filter="hardware">Hardware</button>
+          <button data-filter="learning">Lernen</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+          <article class="glass project-card reveal" data-type="web learning">
+            <span class="project-type">PHP · MVC · CRUD · Tutorial-Reihe</span>
+            <h3>HaushaltsPilot</h3>
+            <p>Schrittweise aufgebaute Haushaltsanwendung mit Login, Rollen, Familien/Haushalten, Listen, Chat, Kalender, CRUD, Admin-Tabs und wachsender Dokumentation.</p>
+            <div class="tagrow"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">AJAX</span><span class="tag">Docs</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="framework web">
+            <span class="project-type">PHP 8+ · PDO · MySQLi · SQLite</span>
+            <h3>O2DB Modern Framework</h3>
+            <p>Modernisiertes Datenbank-Framework mit Adapter-Schicht, Query Builder, Schema Builder, Migrationen, Repository-Basis, Logger und lokaler Entwicklung mit normalem PHP-/Composer-Workflow.</p>
+            <div class="tagrow"><span class="tag">OOP</span><span class="tag">Security</span><span class="tag">Migrations</span><span class="tag">Portfolio</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="web learning">
+            <span class="project-type">IHK · PHP · Kanban · CSV</span>
+            <h3>Kanban Light</h3>
+            <p>Webbasierte Aufgabenverwaltung im IHK-/Umschulungskontext: Board, Rollen, Export, Projektplanung, Dokumentation und Live-Demo-Fokus.</p>
+            <div class="tagrow"><span class="tag">IHK</span><span class="tag">Kanban</span><span class="tag">MVC</span><span class="tag">SQL</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="web learning">
+            <span class="project-type">Lernplattform · Prüfungswissen</span>
+            <h3>Marbyte / AP2 Lernplattform</h3>
+            <p>Eigene Lernplattform mit Fragenkatalog, Admin-Import, Learn/Test-Modus und strukturierten Themen für Fachinformatiker-Prüfungsvorbereitung.</p>
+            <div class="tagrow"><span class="tag">PHP</span><span class="tag">JSON</span><span class="tag">Admin</span><span class="tag">AP2</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="web">
+            <span class="project-type">JavaScript · JSON · Validator</span>
+            <h3>JSON Harbor</h3>
+            <p>Browserbasiertes JSON-Projekt mit Docks, Validator, Comparator, Overlay/Progress und eigener Logik ohne externe Bibliotheksabhängigkeit.</p>
+            <div class="tagrow"><span class="tag">JS</span><span class="tag">JSON</span><span class="tag">UI</span><span class="tag">No libs</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="web">
+            <span class="project-type">QR · JSON · Admin · Demo</span>
+            <h3>ICE Notfall QR System</h3>
+            <p>Demo-System für Notfallinformationen per QR-Code: JSON-Daten, Online-Verwaltung, Admin-CRUD und Sicherheitskonzept für realistischere Weiterentwicklung.</p>
+            <div class="tagrow"><span class="tag">QR</span><span class="tag">CRUD</span><span class="tag">Security</span><span class="tag">Demo</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="python hardware">
+            <span class="project-type">Python · Drucker · QR</span>
+            <h3>Thermo Printer Tool</h3>
+            <p>Einfaches Python-Tool für Text- und QR-Druck auf einem kompakten Thermodrucker. Fokus: Zweck erfüllen, direkt nutzbar, verständlich dokumentiert.</p>
+            <div class="tagrow"><span class="tag">Python</span><span class="tag">Pillow</span><span class="tag">QR</span><span class="tag">Hardware</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="java">
+            <span class="project-type">Java Swing · Game</span>
+            <h3>DOS Banana</h3>
+            <p>Java-Swing-Plattformer mit Leveln, Coins, Gegnern, Leben, Powerups, Projektilen, Fall-Schaden und App-Image-Build.</p>
+            <div class="tagrow"><span class="tag">Java</span><span class="tag">Swing</span><span class="tag">Game Loop</span><span class="tag">jpackage</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="java">
+            <span class="project-type">Java · Simulation</span>
+            <h3>Winpolis / Hausverwalter</h3>
+            <p>Spiel- und Simulationsprojekte mit Zuständen, Geldflüssen, Besitzlogik, Monatsprognosen, Logs und UI-Dialogen.</p>
+            <div class="tagrow"><span class="tag">Java</span><span class="tag">Simulation</span><span class="tag">State</span><span class="tag">UI</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="java learning">
+            <span class="project-type">Java · Lernsoftware</span>
+            <h3>FireKids</h3>
+            <p>Lernspielidee für Kinder mit Memory, Quiz, Lernkarten und Feuerwehr-Fahrzeugwelt. Spielerische Wissensvermittlung statt trockener Theorie.</p>
+            <div class="tagrow"><span class="tag">Java</span><span class="tag">Kids</span><span class="tag">Quiz</span><span class="tag">Lernen</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="python">
+            <span class="project-type">Python · Tk · SQLite</span>
+            <h3>YGO Local Catalog</h3>
+            <p>Lokaler Kartenkatalog mit SQLite-Datenbank, Setlisten, Thumbnails, Popup-Ansichten und Datenimport in mehreren Schritten.</p>
+            <div class="tagrow"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">SQLite</span><span class="tag">Import</span></div>
+          </article>
+
+          <article class="glass project-card reveal" data-type="hardware">
+            <span class="project-type">Arduino · ESP32 · Sensorik</span>
+            <h3>Rheinturm Uhr & NavPocket</h3>
+            <p>LED-Uhr mit DS3231/WS2812B und ESP32-C3-Navigationsprojekt mit OLED, GPS, MPU6050, Web-API und Hardware-Integration.</p>
+            <div class="tagrow"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">GPS</span><span class="tag">OLED</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Akt IV · Stack</span>
+          <h2>Technik mit Bodenhaftung.</h2>
+          <p>Mein Schwerpunkt liegt nicht auf Buzzwords, sondern auf nachvollziehbarer Umsetzung: einfache Architektur, saubere Datenhaltung, verständliche UI, Sicherheit im Blick und Dokumentation, die ein Projekt wirklich tragfähig macht.</p>
+        </div>
+
+        <div class="grid three">
+          <article class="glass skill-card reveal">
+            <h3>Web & Backend</h3>
+            <p>PHP 8+, OOP, MVC, Routing, Sessions, CSRF, Login/Rollen, REST-nahe APIs, MySQL, SQLite, PDO, MySQLi.</p>
+            <div class="skill-meter"><span class="tag">Praxisfokus</span><div class="meter"><i style="--w:88%"></i></div></div>
+          </article>
+          <article class="glass skill-card reveal">
+            <h3>Frontend & UX</h3>
+            <p>HTML5, CSS3, JavaScript, mobile-first, Animationen, hürdenarme Bedienung, klare Admin-Oberflächen, kompakte UI.</p>
+            <div class="skill-meter"><span class="tag">Mobile first</span><div class="meter"><i style="--w:84%"></i></div></div>
+          </article>
+          <article class="glass skill-card reveal">
+            <h3>Daten & Tools</h3>
+            <p>JSON, SQL, Import/Export, CSV, lokale Datenbanken, Validatoren, Query Builder, Migrationen, Logger und Dokumentationsstruktur.</p>
+            <div class="skill-meter"><span class="tag">Datenfluss</span><div class="meter"><i style="--w:86%"></i></div></div>
+          </article>
+          <article class="glass skill-card reveal">
+            <h3>Java & Desktop</h3>
+            <p>Swing-Projekte, kleine Games, Simulationen, Timetracker, Sitzpläne, Kalender-/Kontaktideen und praktische Desktop-Tools.</p>
+            <div class="skill-meter"><span class="tag">Swing/Logik</span><div class="meter"><i style="--w:76%"></i></div></div>
+          </article>
+          <article class="glass skill-card reveal">
+            <h3>Python</h3>
+            <p>Builder, kleine Automatisierungen, Tkinter-GUIs, Druckersteuerung, Datenverarbeitung und lokale SQLite-Werkzeuge.</p>
+            <div class="skill-meter"><span class="tag">Werkzeuge</span><div class="meter"><i style="--w:74%"></i></div></div>
+          </article>
+          <article class="glass skill-card reveal">
+            <h3>Hardware</h3>
+            <p>Arduino, ESP8266, ESP32, ESP32-C3/S3, OLED, GPS/GNSS, MPU6050, WS2812B, RTC, Web-APIs auf Mikrocontrollern.</p>
+            <div class="skill-meter"><span class="tag">Experiment & Integration</span><div class="meter"><i style="--w:72%"></i></div></div>
+          </article>
+        </div>
+
+        <div class="code-panel reveal" style="margin-top:1rem">
+          <header><span>portfolio.identity.php</span><span>readable · practical · documented</span></header>
+          <pre><code><span class="kw">final class</span> <span class="fn">MarcusDziersan</span>
+{
+    <span class="kw">public function</span> <span class="fn">focus</span>(): array
+    {
+        <span class="kw">return</span> [
+            <span class="str">'build'</span> =&gt; <span class="str">'Webanwendungen, Frameworks, Tools, Lernsysteme'</span>,
+            <span class="str">'stack'</span> =&gt; [<span class="str">'PHP 8+'</span>, <span class="str">'JS'</span>, <span class="str">'SQL'</span>, <span class="str">'JSON'</span>, <span class="str">'Java'</span>, <span class="str">'Python'</span>],
+            <span class="str">'mindset'</span> =&gt; <span class="str">'erst verstehen, dann sauber bauen, dann dokumentieren'</span>,
+        ];
+    }
+
+    <span class="cm">// Portfolio-Ziel: echte Lernkurve sichtbar machen.</span>
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" id="haltung">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Akt V · Haltung</span>
+          <h2>Digitalisierung für Menschen.</h2>
+          <p>Ich mag Technik. Aber Technik ist nicht der Zweck. Gute Software muss Menschen Arbeit abnehmen, Abläufe klären, Fehler reduzieren und verständlich bleiben. Besonders bei Admin-Oberflächen, internen Tools und Alltagssoftware zählt: schnell, robust, bedienbar.</p>
+        </div>
+
+        <div class="grid three principles">
+          <article class="glass principle reveal">
+            <h3>Einfach vor kompliziert</h3>
+            <p>Kein unnötiger Overkill. Erst eine stabile, nachvollziehbare Lösung. Dann erweitern.</p>
+          </article>
+          <article class="glass principle reveal">
+            <h3>Sicherheit von Anfang an</h3>
+            <p>Prepared Statements, CSRF, Sessions, Rollen, saubere Validierung und sinnvolle Fehlerbehandlung gehören nicht ans Ende.</p>
+          </article>
+          <article class="glass principle reveal">
+            <h3>Dokumentation ist Teil des Produkts</h3>
+            <p>README, Changelog, Installationshinweise und klare Struktur machen aus Code ein vorzeigbares Projekt.</p>
+          </article>
+          <article class="glass principle reveal">
+            <h3>Praxis schlägt Showcode</h3>
+            <p>Lieber eine echte CRUD-Anwendung mit Rollen und Datenfluss als ein hübsches Snippet ohne Substanz.</p>
+          </article>
+          <article class="glass principle reveal">
+            <h3>UI muss helfen</h3>
+            <p>Mobile-first, kompakte Dialoge, verständliche Zustände, klare Aktionen und weniger Reibung im Alltag.</p>
+          </article>
+          <article class="glass principle reveal">
+            <h3>Lernkurve sichtbar machen</h3>
+            <p>GitHub, LinkedIn und Portfolio sollen zeigen: Ich baue, reflektiere, verbessere und gehe den nächsten Schritt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" id="kontakt">
+      <div class="container">
+        <div class="glass contact reveal">
+          <span class="section-kicker">Abspann · Kontakt</span>
+          <h2>Bereit für Junior-, Trainee- oder Praktikums-Chancen.</h2>
+          <p>Ich suche Aufgaben, bei denen ich echte Anwendungen bauen, Bestandscode verstehen, sauber dokumentieren und mich fachlich weiterentwickeln kann — besonders im Umfeld PHP, Webentwicklung, Datenbanken, internen Tools und praxisnaher Software.</p>
+          <div class="hero-actions" style="justify-content:center; margin-top:1.2rem">
+            <a class="btn primary" href="mailto:kontakt@marcus-dziersan.net">kontakt@marcus-dziersan.net</a>
+            <a class="btn" href="https://github.com/marcdziersan" target="_blank" rel="noopener me">GitHub</a>
+            <a class="btn" href="https://marcdziersan.github.io/" target="_blank" rel="noopener me">Portfolio Mirror</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="rechtliches" aria-labelledby="legal-title">
+    <div class="container">
+      <div class="legal-wrap">
+        <section class="legal-card" aria-labelledby="impressum-title">
+          <span class="section-kicker">Rechtliches · Impressum</span>
+          <h2 id="impressum-title">Impressum</h2>
+          <p>Angaben gemäß § 5 DDG.</p>
+          <address>
             Marcus Dziersan<br>
             Ferdinandstr. 2<br>
             44536 Lünen<br>
             Deutschland
-          </p>
-
+          </address>
           <h3>Kontakt</h3>
-          <p>
-            E-Mail: <a href="mailto:kontakt@marcus-dziersan.net">kontakt@marcus-dziersan.net</a><br>
-            Webseite: <a href="https://mdwebdev.de">mdwebdev.de</a>
-          </p>
-
+          <p>E-Mail: <a href="mailto:kontakt@marcus-dziersan.net">kontakt@marcus-dziersan.net</a></p>
           <h3>Verantwortlich für den Inhalt</h3>
-          <p>
-            Marcus Dziersan<br>
-            Ferdinandstr. 2<br>
-            44536 Lünen
-          </p>
+          <p>Marcus Dziersan, Anschrift wie oben.</p>
+          <h3>Hinweis zu externen Links</h3>
+          <p>Diese Portfolio-Seite enthält Links zu externen Profilen und Projektseiten. Für Inhalte externer Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+          <p class="legal-note">Stand: 06. Juli 2026. Diese Angaben sind für ein persönliches Portfolio formuliert und ersetzen keine individuelle Rechtsberatung.</p>
+        </section>
 
-          <h3>Haftung für Inhalte</h3>
-          <p>
-            Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen. Diese Webseite dient der persönlichen Portfolio-Darstellung und verweist auf öffentlich zugängliche Projekt-Repositories.
-          </p>
-
-          <h3>Haftung für Links</h3>
-          <p>
-            Diese Webseite enthält Links zu externen Webseiten, insbesondere zu GitHub. Auf deren Inhalte besteht kein Einfluss. Für fremde Inhalte ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Verlinkte Seiten wurden zum Zeitpunkt der Verlinkung geprüft; eine permanente Kontrolle ohne konkreten Anlass ist nicht zumutbar.
-          </p>
-
-          <h3>Urheberrecht</h3>
-          <p>
-            Die auf dieser Webseite erstellten Inhalte, Texte, Grafiken und Gestaltungen unterliegen dem deutschen Urheberrecht. Eine Nutzung, Vervielfältigung oder Weitergabe außerhalb der gesetzlichen Grenzen bedarf der vorherigen Zustimmung des jeweiligen Rechteinhabers.
-          </p>
-        </div>
+        <section class="legal-card" aria-labelledby="datenschutz-title">
+          <span class="section-kicker">Rechtliches · Datenschutz</span>
+          <h2 id="datenschutz-title">Datenschutzerklärung</h2>
+          <p>Verantwortlicher für diese Website ist Marcus Dziersan, Ferdinandstr. 2, 44536 Lünen, Deutschland. Kontakt: <a href="mailto:kontakt@marcus-dziersan.net">kontakt@marcus-dziersan.net</a>.</p>
+          <h3>Grundsatz</h3>
+          <p>Diese Onefile-Portfolio-Seite ist bewusst datensparsam gebaut. Sie verwendet keine Cookies, kein Tracking, keine externen Schriftarten, keine CDN-Bibliotheken und keine eingebetteten Analyse- oder Werbedienste.</p>
+          <h3>Server-Logfiles</h3>
+          <p>Beim Aufruf einer Website können durch den Hosting-Anbieter technisch notwendige Zugriffsdaten verarbeitet werden, zum Beispiel IP-Adresse, Datum und Uhrzeit des Abrufs, angeforderte Datei, Referrer, Browsertyp, Betriebssystem und HTTP-Status. Die Verarbeitung dient dem sicheren und stabilen Betrieb der Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+          <h3>Kontakt per E-Mail</h3>
+          <p>Wenn du per E-Mail Kontakt aufnimmst, werden deine Angaben zur Bearbeitung der Anfrage verarbeitet. Rechtsgrundlage ist je nach Inhalt der Anfrage Art. 6 Abs. 1 lit. b DSGVO oder Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+          <h3>Externe Links</h3>
+          <p>Beim Anklicken externer Links, etwa zu GitHub oder weiteren Portfolio-Seiten, verlässt du diese Website. Dort gelten die Datenschutzregeln des jeweiligen Anbieters.</p>
+          <h3>Deine Rechte</h3>
+          <ul>
+            <li>Auskunft über verarbeitete personenbezogene Daten</li>
+            <li>Berichtigung unrichtiger Daten</li>
+            <li>Löschung oder Einschränkung der Verarbeitung</li>
+            <li>Widerspruch gegen Verarbeitung auf Grundlage berechtigter Interessen</li>
+            <li>Datenübertragbarkeit, soweit gesetzlich anwendbar</li>
+            <li>Beschwerde bei einer zuständigen Datenschutzaufsichtsbehörde</li>
+          </ul>
+          <p class="legal-note">Keine Formulare, keine Nutzerkonten, keine Newsletter, keine Kommentarfunktion und kein Profiling.</p>
+        </section>
       </div>
-    </section>
 
-    <section class="section" id="datenschutz">
-      <div class="section-head">
-        <span class="kicker">Datenschutz</span>
-        <h2>Datenschutzerklärung</h2>
+      <div class="footer-grid">
+        <span>© <span id="year"></span> Marcus Dziersan · Onefile HTML5/CSS3/JS Portfolio</span>
+        <span class="footer-links">
+          <a href="#top">Nach oben</a>
+          <a href="#impressum-title">Impressum</a>
+          <a href="#datenschutz-title">Datenschutz</a>
+        </span>
       </div>
-
-      <div class="legal-grid">
-        <div class="legal-card">
-         
-          <h3>1. Verantwortlicher</h3>
-          <p>
-            Verantwortlich für die Datenverarbeitung auf dieser Webseite ist:<br>
-            Marcus Dziersan<br>
-            Ferdinandstr. 2<br>
-            44536 Lünen<br>
-            Deutschland<br>
-            E-Mail: <a href="mailto:kontakt@marcus-dziersan.net">kontakt@marcus-dziersan.net</a>
-          </p>
-
-          <h3>2. Allgemeine Hinweise</h3>
-          <p>
-            Diese Webseite ist als statisches Portfolio aufgebaut. Es gibt kein Kontaktformular, keinen Newsletter, keinen Login-Bereich, kein Tracking, keine eingebundenen Analyse-Dienste und keine bewusst gesetzten Marketing-Cookies.
-          </p>
-
-          <h3>3. Server-Logfiles</h3>
-          <p>
-            Beim Aufruf dieser Webseite können durch den Hostinganbieter technisch notwendige Zugriffsdaten verarbeitet werden. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Datei, Referrer-URL, Browsertyp, Betriebssystem und übertragene Datenmenge gehören.
-          </p>
-          <p>
-            Die Verarbeitung erfolgt zur technischen Bereitstellung, Stabilität und Sicherheit der Webseite. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, da ein berechtigtes Interesse am sicheren und störungsfreien Betrieb der Webseite besteht.
-          </p>
-
-          <h3>4. E-Mail-Kontakt</h3>
-          <p>
-            Wenn per E-Mail Kontakt aufgenommen wird, werden die übermittelten Daten zur Bearbeitung der Anfrage verarbeitet. Dazu gehören insbesondere die E-Mail-Adresse, der Inhalt der Nachricht und freiwillig mitgeteilte Angaben. Diese Daten werden nicht ohne Einwilligung weitergegeben.
-          </p>
-
-          <h3>5. Externe Links zu GitHub</h3>
-          <p>
-            Diese Webseite verlinkt auf GitHub. Beim Anklicken eines externen Links wird die Webseite verlassen. Für die Verarbeitung personenbezogener Daten auf GitHub ist der jeweilige Betreiber der externen Plattform verantwortlich.
-          </p>
-
-          <h3>6. Cookies und Tracking</h3>
-          <p>
-            Diese Webseite verwendet keine eigenen Tracking-Cookies und keine Analysewerkzeuge wie Google Analytics, Matomo oder vergleichbare Dienste. Sollten durch den Hostinganbieter technisch notwendige Cookies oder Sicherheitsmechanismen eingesetzt werden, erfolgen diese außerhalb der aktiven Gestaltung dieser statischen Seite.
-          </p>
-
-          <h3>7. Speicherdauer</h3>
-          <p>
-            Personenbezogene Daten werden nur so lange verarbeitet, wie es für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Server-Logfiles werden in der Regel durch den Hostinganbieter nach dessen technischen und rechtlichen Vorgaben gelöscht.
-          </p>
-
-          <h3>8. Rechte betroffener Personen</h3>
-          <p>
-            Betroffene Personen haben im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen bestimmte Verarbeitungen. Zudem besteht das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.
-          </p>
-
-          <h3>9. Keine automatisierte Entscheidungsfindung</h3>
-          <p>
-            Eine automatisierte Entscheidungsfindung oder ein Profiling findet auf dieser Webseite nicht statt.
-          </p>
-
-          <h3>10. Stand</h3>
-          <p>
-            Stand dieser Datenschutzerklärung: Juli 2026.
-          </p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div>© <span id="year"></span> Marcus Dziersan · Fachinformatiker Anwendungsentwicklung in Umschulung</div>
-    <div class="footer-links">
-      <a href="https://github.com/marcdziersan" target="_blank" rel="noopener">GitHub</a>
-      <a href="#impressum">Impressum</a>
-      <a href="#datenschutz">Datenschutz</a>
-      <a href="#top">Nach oben</a>
     </div>
   </footer>
 
   <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('#navLinks');
-    const links = navLinks.querySelectorAll('a');
+    (() => {
+      'use strict';
 
-    function setMenu(open) {
-      menuButton.setAttribute('aria-expanded', String(open));
-      navLinks.classList.toggle('is-open', open);
-      menuButton.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-    }
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      const progressBar = document.getElementById('progressBar');
+      const year = document.getElementById('year');
+      const typing = document.getElementById('typing');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    menuButton.addEventListener('click', () => {
-      const open = menuButton.getAttribute('aria-expanded') !== 'true';
-      setMenu(open);
-    });
+      year.textContent = new Date().getFullYear();
 
-    links.forEach(link => {
-      link.addEventListener('click', () => setMenu(false));
-    });
+      navToggle?.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(open));
+      });
 
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') setMenu(false);
-    });
+      navLinks?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          navToggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
 
-    document.querySelector('#year').textContent = new Date().getFullYear();
+      const updateProgress = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = height > 0 ? Math.min(100, (scrollTop / height) * 100) : 0;
+        progressBar.style.width = progress + '%';
+      };
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+
+      const revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+        revealItems.forEach(item => observer.observe(item));
+      } else {
+        revealItems.forEach(item => item.classList.add('in'));
+      }
+
+      const sections = [...document.querySelectorAll('main section[id]')];
+      const navAnchors = [...document.querySelectorAll('.nav-links a')];
+      const setActiveNav = () => {
+        const current = sections
+          .map(section => ({ id: section.id, y: Math.abs(section.getBoundingClientRect().top - 120) }))
+          .sort((a, b) => a.y - b.y)[0]?.id;
+        navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+      };
+      window.addEventListener('scroll', setActiveNav, { passive: true });
+      setActiveNav();
+
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const projectCards = document.querySelectorAll('.project-card');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          projectCards.forEach(card => {
+            const types = card.dataset.type || '';
+            card.classList.toggle('hide', filter !== 'all' && !types.includes(filter));
+          });
+        });
+      });
+
+      if (!reduceMotion && typing) {
+        const phrases = [
+          'PHP 8+ · OOP · MVC · SQL · JSON · JS',
+          'PDO · MySQLi · SQLite · Migrationen',
+          'Java Swing · Python · Arduino · ESP32',
+          'GitHub · Dokumentation · echte Projekte'
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        const tick = () => {
+          const phrase = phrases[phraseIndex];
+          typing.textContent = phrase.slice(0, charIndex);
+
+          if (!deleting && charIndex < phrase.length) {
+            charIndex++;
+            setTimeout(tick, 45);
+            return;
+          }
+          if (!deleting && charIndex === phrase.length) {
+            deleting = true;
+            setTimeout(tick, 1300);
+            return;
+          }
+          if (deleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(tick, 22);
+            return;
+          }
+          deleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(tick, 220);
+        };
+        tick();
+      }
+    })();
   </script>
 </body>
 </html>
