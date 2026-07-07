@@ -1,4 +1,6 @@
 
+
+
 <!doctype html>
 <html lang="de">
 <head>
@@ -444,8 +446,34 @@
     .dot { width:10px; height:10px; border-radius:99px; background:rgba(255,255,255,.35); }
     .terminal-line { display:block; margin:.34rem 0; color: #b7c8dc; }
     .terminal-line b { color: var(--accent); font-weight: 700; }
-    #typing { color: #fff; }
-    .cursor { animation: blink .8s steps(1) infinite; }
+    #typing {
+      display: inline-block;
+      color: #fff;
+      min-width: 0;
+    }
+
+    .terminal-typing {
+      display: flex;
+      align-items: baseline;
+      gap: .05rem;
+      min-height: 1.48em;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .terminal-typing #typing {
+      flex: 0 1 auto;
+      overflow: hidden;
+      text-overflow: clip;
+      overflow-wrap: normal;
+    }
+
+    .cursor {
+      display: inline-block;
+      flex: 0 0 1ch;
+      width: 1ch;
+      animation: blink .8s steps(1) infinite;
+    }
 
     .film-strip {
       display: flex;
@@ -1061,7 +1089,7 @@
               <span class="terminal-line"><b>$</b> whoami</span>
               <span class="terminal-line">Marcus Dziersan · angehender Fachinformatiker AE</span>
               <span class="terminal-line"><b>$</b> focus --stack</span>
-              <span class="terminal-line" id="typing">PHP 8+ · OOP · MVC · SQL · JSON · JS</span><span class="cursor">_</span>
+              <span class="terminal-line terminal-typing"><span id="typing">PHP 8+ · OOP · MVC · SQL · JSON · JS</span><span class="cursor" aria-hidden="true">_</span></span>
               <span class="terminal-line"><b>$</b> motto</span>
               <span class="terminal-line">Nicht nur Tutorials konsumieren. Dinge bauen, dokumentieren, verbessern.</span>
             </div>
