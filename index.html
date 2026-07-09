@@ -1201,6 +1201,85 @@
       font-weight: 900;
     }
 
+
+
+    /* GitHub-Sektion: mobile-sichere Ausrichtung und Textumbrüche */
+    .github-panel,
+    .github-copy,
+    .github-stats,
+    .repo-list,
+    .github-stat,
+    .repo-item {
+      min-width: 0;
+    }
+
+    .github-copy h2,
+    .github-copy p,
+    .github-stat strong,
+    .github-stat span,
+    .repo-item strong,
+    .repo-item span {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .repo-item > span:first-child {
+      min-width: 0;
+    }
+
+    @media (max-width: 719px) {
+      .github-panel {
+        width: 100%;
+        padding: 1.1rem;
+        gap: 1rem;
+        border-radius: 26px;
+      }
+
+      .github-copy h2 {
+        font-size: clamp(1.55rem, 8.8vw, 2.25rem);
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+      }
+
+      .github-copy p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+      }
+
+      .github-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .github-actions .btn {
+        width: 100%;
+        min-height: 48px;
+        padding-inline: 1rem;
+        text-align: center;
+      }
+
+      .github-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+      }
+
+      .github-stat {
+        padding: 0.9rem;
+      }
+
+      .repo-item {
+        align-items: flex-start;
+        padding: 0.95rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .github-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .cta {
       padding-bottom: 5.5rem;
     }
